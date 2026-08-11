@@ -104,6 +104,8 @@ KUROKI
 
 </div>
 
+
+
 <!-- 
 移动端汉堡按钮
 
@@ -116,12 +118,6 @@ KUROKI
 <span></span>
 <span></span>
 </button>
-
-<nav class="menu" id="mainMenu">
-...
-</nav>
-
-</header>
 
 
 
@@ -136,8 +132,9 @@ Industries
 About Us
 Contact
 
+包含 id="mainMenu" 供 JS 控制展开/收起
 -->
-<nav class="menu">
+<nav class="menu" id="mainMenu">
 
 
 <a href="#">
@@ -151,7 +148,8 @@ Products 菜单项
 
 包含下拉菜单
 
-鼠标悬停时展开
+桌面端：鼠标悬停时展开
+移动端：点击展开
 -->
 <div class="dropdown">
 
@@ -682,6 +680,35 @@ Industry Solution
 
 
 
+<!-- 
+移动端菜单交互脚本
+
+控制汉堡菜单展开/收起
+
+控制Products点击展开
+-->
+<script>
+
+function toggleMenu() {
+
+document.getElementById('mainMenu')
+.classList.toggle('menu-open');
+
+}
+
+
+function toggleDropdown(e) {
+
+// 阻止点击跳转到 #
+e.preventDefault();
+
+e.currentTarget
+.closest('.dropdown')
+.classList.toggle('dropdown-open');
+
+}
+
+</script>
 
 
 </body>
