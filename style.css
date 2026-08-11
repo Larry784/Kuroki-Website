@@ -451,6 +451,24 @@ opacity:.75;
 }
 
 
+
+/*
+汉堡按钮
+
+默认（桌面端）隐藏
+
+只在900px以下的移动端显示
+*/
+
+.menu-toggle {
+
+display:none;
+
+}
+
+
+
+
 /* ==================================================
                 PRODUCTS DROPDOWN
 
@@ -1208,14 +1226,9 @@ padding:
 }
 
 
-@media(max-width:900px){
-
-.navbar {
-padding:0 25px;
-}
 
 /* 
-默认隐藏汉堡按钮
+汉堡按钮
 
 只在移动端显示
 */
@@ -1403,53 +1416,6 @@ width:100%;
 margin-top:16px;
 
 }
-
-
-
-h1 {
-font-size:42px;
-}
-
-h2 {
-font-size:32px;
-}
-
-.hero-content {
-margin-left:30px;
-}
-
-.product-grid,
-.industry-grid,
-.advantage-grid {
-grid-template-columns:1fr;
-}
-
-.products,
-.industries,
-.engineering,
-.cta {
-padding:80px 30px;
-}
-
-}
-
-
-/*
-汉堡按钮
-
-默认（桌面端）隐藏
-*/
-
-.menu-toggle {
-
-display:none;
-
-}
-
-
-
-
-
 
 
 
