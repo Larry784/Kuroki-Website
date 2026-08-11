@@ -473,11 +473,13 @@ position:relative;
 
 display:none;
 
-position:absolute;
+position:fixed;
 
-top:100%;
+top:80px;
 
-left:0;
+left:60px;
+
+right:60px;
 
 background:white;
 
@@ -487,11 +489,7 @@ border-radius:16px;
 
 padding:30px;
 
-display:none;
-
 gap:60px;
-
-min-width:400px;
 
 }
 
