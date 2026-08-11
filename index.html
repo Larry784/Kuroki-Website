@@ -104,9 +104,24 @@ KUROKI
 
 </div>
 
+<!-- 
+移动端汉堡按钮
 
+只在900px以下显示
 
+点击控制菜单展开/收起
+-->
+<button class="menu-toggle" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</button>
 
+<nav class="menu" id="mainMenu">
+...
+</nav>
+
+</header>
 
 
 
@@ -140,7 +155,7 @@ Products 菜单项
 -->
 <div class="dropdown">
 
-<a href="#" class="dropdown-toggle">
+<a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
 Products
 </a>
 
