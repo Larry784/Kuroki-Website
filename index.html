@@ -689,24 +689,112 @@ Industry Solution
 -->
 <script>
 
+var mainMenu = document.getElementById('mainMenu');
+var menuToggleBtn = document.querySelector('.menu-toggle');
+
+
+/*
+点击汉堡按钮
+
+展开/收起整个移动端菜单
+
+同时把按钮变成 X 图标，
+并且在收起时，顺便把 Products 子菜单也收起
+*/
+
 function toggleMenu() {
 
-document.getElementById('mainMenu')
-.classList.toggle('menu-open');
+mainMenu.classList.toggle('menu-open');
+
+menuToggleBtn.classList.toggle('active');
+
+
+if (!mainMenu.classList.contains('menu-open')) {
+
+closeAllDropdowns();
 
 }
 
+}
+
+
+/*
+点击 Products
+
+展开/收起子菜单（X / S / V / XP-SR 系列）
+*/
 
 function toggleDropdown(e) {
 
 // 阻止点击跳转到 #
 e.preventDefault();
 
+// 防止这次点击被外部区域的关闭逻辑立刻抓到，导致刚展开又被关掉
+e.stopPropagation();
+
 e.currentTarget
 .closest('.dropdown')
 .classList.toggle('dropdown-open');
 
 }
+
+
+/*
+收起所有展开的 Products 子菜单
+*/
+
+function closeAllDropdowns() {
+
+document.querySelectorAll('.dropdown.dropdown-open')
+.forEach(function(d) {
+d.classList.remove('dropdown-open');
+});
+
+}
+
+
+/*
+点击菜单里的普通链接
+（Home / Industries / About Us / Contact / 
+Request Quote / X Series 等具体产品链接）
+
+自动收起整个移动端菜单
+*/
+
+document.querySelectorAll('#mainMenu a:not(.dropdown-toggle)')
+.forEach(function(link) {
+
+link.addEventListener('click', function() {
+
+mainMenu.classList.remove('menu-open');
+menuToggleBtn.classList.remove('active');
+closeAllDropdowns();
+
+});
+
+});
+
+
+/*
+点击菜单以外的任何区域
+
+自动收起整个移动端菜单
+*/
+
+document.addEventListener('click', function(e) {
+
+var clickedInsideMenu = mainMenu.contains(e.target);
+var clickedToggleBtn = menuToggleBtn.contains(e.target);
+
+if (!clickedInsideMenu && !clickedToggleBtn) {
+
+mainMenu.classList.remove('menu-open');
+menuToggleBtn.classList.remove('active');
+closeAllDropdowns();
+
+}
+
+});
 
 </script>
 
