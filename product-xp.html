@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Series - Kuroki Industrial Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="Kuroki Logo">
+        <span>KUROKI</span>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="menu" id="mainMenu">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+                Products <small>▾</small>
+            </a>
+            <div class="dropdown-menu">
+                <div class="dropdown-column">
+                    <h4>Screen Printing Rubber Scraper</h4>
+                    <a href="product-xp.html">X Series</a>
+                    <a href="product-sr.html">S Series</a>
+                    <a href="#">V Series</a>
+                    
+                </div>
+                <div class="dropdown-column">
+                    <h4>Custom Rubber Scrapers</h4>
+                    <a href="#">Custom Rubber Scrapers</a>
+                </div>
+            </div>
+        </div>
+        <a href="#">Industries</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <button>Request Quote</button>
+    </nav>
+</header>
+
+<!-- PRODUCT HERO -->
+<section class="product-hero">
+    <div class="container">
+        <div class="product-hero-content">
+            <span class="category-tag">Industrial Squeegees</span>
+            <h1>X Series</h1>
+            <p class="description">A classic and well-received Kuroki model since it was launched in 2008. Its outstanding solvent-resistant property makes it suitable for various high precise printing tasks.</p>
+            <button class="primary-btn">Download Data Sheet</button>
+        </div>
+        <div class="product-hero-image">
+            <!-- Using one of the uploaded images for context -->
+            <img src="第14页-26.PNG" alt="X Series Squeegee" class="refined-img">
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                
+                <h3>Solvent & Wear Resistance</h3>
+                <p>Exceptional Solvent Resistance and Wear Resistance: Serves as a full replacement for high-end imported printing squeegees, significantly optimizing process costs.</p>
+            </div>
+            <div class="feature-card">
+                
+                <h3>Re-sharpenable</h3>
+                <p>Can be resharpened multiple times to increase reuse cycles and maximize cost efficiency.</p>
+            </div>
+            <div class="feature-card">
+                
+                <h3>Ultra-Low Deformation</h3>
+                <p>Highly resistant to solvent swelling with minimal deformation during use, making it ideal for high-precision screen printing while offering superior protection to the printing screen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SPECIFICATIONS SECTION -->
+<section class="specs">
+    <div class="container">
+        <h2 class="section-title">Technical Specifications</h2>
+        
+        <div class="spec-group">
+            <h3>Shore A° (Hardness)</h3>
+            <div class="spec-table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Model Grade</th>
+                            <th>Hardness Range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>65A</td><td>62 ~ 68A</td></tr>
+                        <tr><td>75A</td><td>72 ~ 78A</td></tr>
+                        <tr><td>80A</td><td>80 ~ 85A</td></tr>
+                        <tr><td>85A</td><td>85A and above</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="spec-group">
+            <h3>Standard Dimensions (mm)</h3>
+            <div class="dimension-grid">
+                <div class="dim-item">9 × 52 × 1550</div>
+                <div class="dim-item">9 × 30 × 1550</div>
+                <div class="dim-item">20 × 52 × 1550</div>
+                <div class="dim-item customized">Customized sizes available</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-product">
+    <div class="container">
+        <h2>Ready to optimize your printing process?</h2>
+        <p>Get in touch with our engineering team for a customized solution.</p>
+        <button class="cta-btn">Request a Quote</button>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo">KUROKI</div>
+        <p>&copy; 2026 Kuroki Industrial Technology. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    var mainMenu = document.getElementById('mainMenu');
+    var menuToggleBtn = document.querySelector('.menu-toggle');
+
+    function toggleMenu() {
+        mainMenu.classList.toggle('menu-open');
+        menuToggleBtn.classList.toggle('active');
+        if (!mainMenu.classList.contains('menu-open')) {
+            closeAllDropdowns();
+        }
+    }
+
+    function toggleDropdown(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.currentTarget.closest('.dropdown').classList.toggle('dropdown-open');
+    }
+
+    function closeAllDropdowns() {
+        document.querySelectorAll('.dropdown.dropdown-open').forEach(function(d) {
+            d.classList.remove('dropdown-open');
+        });
+    }
+
+    document.addEventListener('click', function(e) {
+        if (!mainMenu.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+            mainMenu.classList.remove('menu-open');
+            menuToggleBtn.classList.remove('active');
+            closeAllDropdowns();
+        }
+    });
+</script>
+
+</body>
+</html>
