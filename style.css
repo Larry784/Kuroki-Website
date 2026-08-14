@@ -1520,6 +1520,19 @@ padding:
 }
 
 
+/* Layout Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
 /* About Us Page Styles */
 .about-hero {
     padding: 180px 0 100px;
