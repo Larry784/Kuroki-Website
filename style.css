@@ -1651,3 +1651,54 @@ padding:
         padding-top: 140px;
     }
 }
+
+/* Pattern & Certification Section */
+.cert-section {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.cert-item {
+    text-align: center;
+}
+
+.cert-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cert-item img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-color: var(--black);
+}
+
+.cert-item p {
+    margin-top: 20px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+@media (max-width: 900px) {
+    .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+}
