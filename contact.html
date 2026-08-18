@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customized Squeegees - Kuroki Industrial Technology</title>
+    <title>Contact Us - Kuroki Industrial Technology</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="product.css">
+    <style>
+        .contact-section {
+            padding: 100px 20px;
+            background-color: #f4f7f9;
+            text-align: center;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .contact-section h1 {
+            color: #355B82;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .contact-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .contact-email {
+            display: inline-block;
+            font-size: 1.5rem;
+            color: #355B82;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid #355B82;
+            transition: all 0.3s ease;
+        }
+        .contact-email:hover {
+            color: #2a4867;
+            border-bottom-color: #2a4867;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 40px 20px;
+            }
+            .contact-section h1 {
+                font-size: 2rem;
+            }
+            .contact-section p {
+                font-size: 1.1rem;
+            }
+            .contact-email {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -53,68 +111,11 @@
 </header>
 
 <main>
-    <section class="product-hero">
-        <div class="container">
-            <div class="product-hero-content">
-                <span class="category-tag">Customized</span>
-                <h1>Customized Squeegees</h1>
-                <p class="description">
-                    We offer custom squeegee tailored to your specific business requirements. Contact us today for more details.
-                </p>
-                <button class="primary-btn">Contact Specialist</button>
-            </div>
-
-            <div class="product-hero-image">
-                <img src="custom-hero.png" alt="Customized Squeegees" class="refined-img">
-            </div>
-        </div>
-    </section>
-
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Key Customization Features</h2>
-            <div class="feature-grid">
-                <!-- Feature 1 -->
-                <article class="feature-card masked" style="background-image: url('custom-feat-1.png');">
-                    <div class="mask-overlay"></div>
-                    <div class="content">
-                        <h3>High Wear Resistance</h3>
-                        <p>
-                            Features high abrasion resistance and excellent tolerance to solvents.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- Feature 2 -->
-                <article class="feature-card masked" style="background-image: url('custom-feat-2.png');">
-                    <div class="mask-overlay"></div>
-                    <div class="content">
-                        <h3>Good Elasticity</h3>
-                        <p>
-                            Superior resilience guarantees optimal printing results.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- Feature 3 -->
-                <article class="feature-card masked" style="background-image: url('custom-feat-3.png');">
-                    <div class="mask-overlay"></div>
-                    <div class="content">
-                        <h3>Balanced Performance</h3>
-                        <p>
-                            Delivers a high cost-performance ratio, making it more economical and versatile.
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-product">
-        <div class="container">
-            <h2>Have a unique printing challenge?</h2>
-            <p>Our engineering team is ready to develop a customized squeegee solution specifically for your needs.</p>
-            <button class="cta-btn">Start Customization</button>
+    <section class="contact-section">
+        <div class="contact-container">
+            <h1>Get in Touch</h1>
+            <p>If you have any questions about our products or would love to learn more, please do not hesitate to contact us.</p>
+            <a href="mailto:linrz@kuroki.com.cn" class="contact-email">linrz@kuroki.com.cn</a>
         </div>
     </section>
 </main>
