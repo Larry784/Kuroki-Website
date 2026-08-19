@@ -68,7 +68,7 @@
 <body>
 
 <header class="navbar">
-    <div class="logo">
+    <div class="logo" style="cursor: pointer;" onclick="window.location.href='index.html'">
         <img src="logo.png" alt="Kuroki Logo">
         <span>KUROKI</span>
     </div>
@@ -77,9 +77,8 @@
         <span></span><span></span><span></span>
     </button>
 
-    <nav class="menu" id="mainMenu">
+        <nav class="menu" id="mainMenu">
         <a href="index.html">Home</a>
-
         <div class="dropdown">
             <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
                 Products <small>▾</small>
@@ -93,6 +92,12 @@
                     <a href="product-c.html">C Series</a>
                 </div>
                 <div class="dropdown-column">
+                    <h4>&nbsp;</h4>
+                    <a href="product-ep.html">EP Series</a>
+                    <a href="product-sp.html">SP/SPB Series</a>
+                    <a href="product-tp.html">TP Series</a>
+                </div>
+                <div class="dropdown-column">
                     <h4>Customized</h4>
                     <a href="product-custom.html">Customized Squeegees</a>
                 </div>
@@ -103,10 +108,9 @@
                 </div>
             </div>
         </div>
-
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
-        <button>Request Quote</button>
+        <button onclick="window.location.href='contact.html'">Request Quote</button>
     </nav>
 </header>
 

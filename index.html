@@ -98,7 +98,7 @@ href="style.css">
 
 <!-- 公司Logo -->
 
-<div class="logo">
+<div class="logo" style="cursor: pointer;" onclick="window.location.href='index.html'">
     <img src="logo.png" alt="Kuroki Logo">
     <span>KUROKI</span>
 </div>
@@ -132,106 +132,41 @@ Contact
 
 包含 id="mainMenu" 供 JS 控制展开/收起
 -->
-<nav class="menu" id="mainMenu">
-
-
-<a href="#">
-Home
-</a>
-
-
-
-<!-- 
-Products 菜单项
-
-包含下拉菜单
-
-桌面端：鼠标悬停时展开
-移动端：点击展开
--->
-<div class="dropdown">
-
-<a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
-Products <small>▾</small>
-</a>
-
-
-<!-- 下拉面板 -->
-<div class="dropdown-menu">
-
-
-<!-- 左侧：Screen Printing Squeegees 及其系列 -->
-<div class="dropdown-column">
-
-<h4>Screen Printing Squeegees</h4>
+    <nav class="menu" id="mainMenu">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+                Products <small>▾</small>
+            </a>
+            <div class="dropdown-menu">
+                <div class="dropdown-column">
+                    <h4>Screen Printing Squeegees</h4>
                     <a href="product-xp.html">X/XP Series</a>
                     <a href="product-sr.html">S/SV Series</a>
                     <a href="product-v.html">V/VP Series</a>
                     <a href="product-c.html">C Series</a>
+                </div>
+                <div class="dropdown-column">
+                    <h4>&nbsp;</h4>
                     <a href="product-ep.html">EP Series</a>
                     <a href="product-sp.html">SP/SPB Series</a>
                     <a href="product-tp.html">TP Series</a>
                 </div>
-
-
-
-<!-- 右侧：Customized Squeegees -->
-<div class="dropdown-column">
-
-<h4>Customized</h4>
-
-<a href="product-custom.html">Customized Squeegees</a>
-
-</div>
-
-<div class="dropdown-column">
-
-<h4>Product Guide</h4>
-
-<a href="product-guide-choice.html">How to choose right squeegees</a>
+                <div class="dropdown-column">
+                    <h4>Customized</h4>
+                    <a href="product-custom.html">Customized Squeegees</a>
+                </div>
+                <div class="dropdown-column">
+                    <h4>Product Guide</h4>
+                    <a href="product-guide-choice.html">How to choose right squeegees</a>
                     <a href="product-guide-maintenance.html">Maintenance Guide</a>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-<a href="about.html">About Us</a>
-
-
-
-
-<a href="contact.html">Contact</a>
-
-
-
-
-
-
-<!-- 
-黑色CTA按钮
-
-用于引导客户询价
-
--->
-<button>
-
-Request Quote
-
-</button>
-
-
-
-</nav>
+                </div>
+            </div>
+        </div>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <button onclick="window.location.href='contact.html'">Request Quote</button>
+    </nav>
 
 
 </header>
@@ -324,7 +259,7 @@ printing parts and accessories worldwide.
 用户点击进入产品页面
 
 -->
-<button>
+<button onclick="window.location.href='product-xp.html'">
 
 Explore Products
 
