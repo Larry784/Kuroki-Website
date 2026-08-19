@@ -497,9 +497,11 @@ box-shadow:0 10px 30px rgba(0,0,0,.08);
 
 border-radius:16px;
 
-padding:30px;
+padding:30px 60px; /* 增加左右内边距 */
 
-gap:15px;
+gap:20px; /* 基础间距 */
+
+justify-content: flex-start;
 
 }
 
@@ -543,13 +545,16 @@ gap:15px;
 
 
 .dropdown-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 160px; /* 设置最小宽度使列更紧凑 */
+}
 
-display:flex;
-
-flex-direction:column;
-
-gap:12px;
-
+/* 增加 Customized 和 Product Guide 的间距 */
+.dropdown-column:nth-child(3),
+.dropdown-column:nth-child(4) {
+    margin-left: 60px;
 }
 
 
@@ -558,16 +563,19 @@ gap:12px;
     color: var(--black);
     font-size: 15px;
     transition: .2s;
-    padding: 6px 0; /* 移除左右内边距，只保留上下间距 */
-    display: block;
+    padding: 6px 12px;
+    margin-left: -12px; /* 抵消 padding 使文字对齐 */
+    display: inline-block; /* 使按键长度随文字变化 */
+    border-radius: 4px;
 }
-
 
 .dropdown-column a:hover {
-
-opacity:.6;
-
+    background: rgba(53, 91, 130, 0.05);
+    opacity: 1;
 }
+
+
+
 
 
 
