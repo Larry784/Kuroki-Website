@@ -142,7 +142,7 @@ Contact
                 <div class="dropdown-column">
                     <h4>Screen Printing Squeegees</h4>
                     <a href="product-xp.html">X/XP Series</a>
-                    <a href="product-sr.html">S/SV Series</a>
+                    <a href="product-sr.html">S/SR Series</a>
                     <a href="product-v.html">V/VP Series</a>
                     <a href="product-c.html">C Series</a>
                 </div>
@@ -259,7 +259,7 @@ printing parts and accessories worldwide.
 用户点击进入产品页面
 
 -->
-<button onclick="window.location.href='product-xp.html'">
+<button onclick="openProductDropdown()">
 
 Explore Products
 
@@ -475,6 +475,16 @@ e.currentTarget
 .closest('.dropdown')
 .classList.toggle('dropdown-open');
 
+}
+
+function openProductDropdown() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(function() {
+        var dropdown = document.querySelector('.dropdown');
+        if (dropdown) {
+            dropdown.classList.add('dropdown-open');
+        }
+    }, 500);
 }
 
 
