@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EP Series - Kuroki Industrial Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="Kuroki Logo">
+        <span>KUROKI</span>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="menu" id="mainMenu">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+                Products <small>▾</small>
+            </a>
+            <div class="dropdown-menu">
+                <div class="dropdown-column">
+                    <h4>Screen Printing Squeegees</h4>
+                    <a href="product-xp.html">X/XP Series</a>
+                    <a href="product-sr.html">S/SV Series</a>
+                    <a href="product-v.html">V/VP Series</a>
+                    <a href="product-c.html">C Series</a>
+                    <a href="product-ep.html">EP Series</a>
+                    <a href="product-sp.html">SP/SPB Series</a>
+                    <a href="product-tp.html">TP Series</a>
+                </div>
+                <div class="dropdown-column">
+                    <h4>Customized</h4>
+                    <a href="product-custom.html">Customized Squeegees</a>
+                </div>
+                <div class="dropdown-column">
+                    <h4>Product Guide</h4>
+                    <a href="product-guide-choice.html">How to choose right squeegees</a>
+                    <a href="product-guide-maintenance.html">Maintenance Guide</a>
+                </div>
+            </div>
+        </div>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <button>Request Quote</button>
+    </nav>
+</header>
+
+<!-- PRODUCT HERO -->
+<section class="product-hero">
+    <div class="container">
+        <div class="product-hero-content">
+            <span class="category-tag">Specialized Squeegees</span>
+            <h1>EP Series</h1>
+            <p class="description">Suitable for printing jobs that adopts polarized inks, such as blood glucose test strip printing.</p>
+            <button class="primary-btn">Download Data Sheet</button>
+        </div>
+        <div class="product-hero-image">
+            <img src="product-ep.webp" alt="EP Series Squeegee" class="refined-img">
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Anti-Polarized</h3>
+                <p>Features high abrasion resistance and excellent tolerance to solvents, specifically engineered for polarized ink environments.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- APPLICATION SCENARIO SECTION -->
+<section class="application-scenario">
+    <div class="container">
+        <h2 class="section-title">Application Scenario</h2>
+        <div class="application-scenario-content">
+            <div class="application-scenario-text">
+                <div class="application-scenario-card">
+                    <p>For printing jobs that adopts polarized ink, for example blood glucose test strip printing.</p>
+                </div>
+            </div>
+            <div class="application-scenario-image">
+                <img src="app-ep.png" alt="EP Series Application - Blood Glucose Test Strip Printing">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SPECIFICATIONS SECTION -->
+<section class="specs">
+    <div class="container">
+        <h2 class="section-title">Technical Specifications</h2>
+        
+        <div class="spec-group">
+            <h3>Shore A° (Hardness)</h3>
+            <div class="spec-table-wrapper">
+                <table class="spec-table">
+                    <thead>
+                        <tr>
+                            <th>Model Grade</th>
+                            <th>Hardness Range</th>
+                            <th>Color</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>60A</td><td>60 - 65A</td><td>Grey</td></tr>
+                        <tr><td>70A</td><td>70 - 75A</td><td>Grey</td></tr>
+                        <tr><td>80A</td><td>80 - 85A</td><td>Dark Grey</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="spec-group">
+            <h3>Standard Dimensions (mm)</h3>
+            <div class="dimension-grid">
+                <div class="dim-item">9 × 50 × 250</div>
+                <div class="dim-item">9 × 50 × 500</div>
+                <div class="dim-item customized">Customized sizes available</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-product">
+    <div class="container">
+        <h2>Need a specialized printing solution?</h2>
+        <p>Our engineering team can help you select the perfect EP series configuration for your polarized ink applications.</p>
+        <button class="cta-btn">Request a Quote</button>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo">KUROKI</div>
+        <p>&copy; 2026 Kuroki Industrial Technology. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    var mainMenu = document.getElementById('mainMenu');
+    var menuToggleBtn = document.querySelector('.menu-toggle');
+
+    function toggleMenu() {
+        mainMenu.classList.toggle('menu-open');
+        menuToggleBtn.classList.toggle('active');
+        if (!mainMenu.classList.contains('menu-open')) {
+            closeAllDropdowns();
+        }
+    }
+
+    function toggleDropdown(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.currentTarget.closest('.dropdown').classList.toggle('dropdown-open');
+    }
+
+    function closeAllDropdowns() {
+        document.querySelectorAll('.dropdown.dropdown-open').forEach(function(d) {
+            d.classList.remove('dropdown-open');
+        });
+    }
+
+    document.addEventListener('click', function(e) {
+        if (!mainMenu.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+            mainMenu.classList.remove('menu-open');
+            menuToggleBtn.classList.remove('active');
+            closeAllDropdowns();
+        }
+    });
+</script>
+
+</body>
+</html>
