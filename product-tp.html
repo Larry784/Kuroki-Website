@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP Series - Kuroki Industrial Technology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo" style="cursor: pointer;" onclick="window.location.href='index.html'">
+        <img src="logo.png" alt="Kuroki Logo">
+        <span>KUROKI</span>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="menu" id="mainMenu">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+                Products <small>▾</small>
+            </a>
+            <div class="dropdown-menu">
+                <div class="dropdown-column">
+                    <h4>Screen Printing Squeegees</h4>
+                    <a href="product-xp.html">X/XP Series</a>
+                    <a href="product-sr.html">S/SV Series</a>
+                    <a href="product-v.html">V/VP Series</a>
+                    <a href="product-c.html">C Series</a>
+                </div>
+                <div class="dropdown-column">
+                    <h4>&nbsp;</h4>
+                    <a href="product-ep.html">EP Series</a>
+                    <a href="product-sp.html">SP/SPB Series</a>
+                    <a href="product-tp.html">TP Series</a>
+                </div>
+                <div class="dropdown-column">
+                    <h4>Customized</h4>
+                    <a href="product-custom.html">Customized Squeegees</a>
+                </div>
+                <div class="dropdown-column">
+                    <h4>Product Guide</h4>
+                    <a href="product-guide-choice.html">How to choose right squeegees</a>
+                    <a href="product-guide-maintenance.html">Maintenance Guide</a>
+                </div>
+            </div>
+        </div>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <button onclick="window.location.href='contact.html'">Request Quote</button>
+    </nav>
+</header>
+
+<main>
+    <section class="product-hero">
+        <div class="container">
+            <div class="product-hero-content">
+                <span class="category-tag">High Durability</span>
+                <span class="category-tag">Made in Taiwan</span>
+                <h1>TP Series</h1>
+                <p class="description">Featuring exceptional hardness and outstanding durability, the TP series protects your gravure plates and masks from premature wear, offering a longer-lasting alternative to standard steel scrapers.</p>
+                <button class="primary-btn">Download Data Sheet</button>
+            </div>
+            <div class="product-hero-image">
+                <img src="product-tp.webp" alt="TP Series Squeegee" class="refined-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>High Durability</h3>
+                    <p>The product has exceptional durability to make the usage long lasting, even under demanding industrial conditions.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Plate-Protective</h3>
+                    <p>The TP series prevents premature wear on your gravure plates and masks, extending the life of your expensive printing components.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="application-scenario">
+        <div class="container">
+            <h2 class="section-title">Application Scenario</h2>
+            <div class="application-scenario-content">
+                <div class="application-scenario-text">
+                    <div class="application-scenario-card">
+                        <p>TP series is suitable for gravure and steel plate printing applications requiring high precision and resistance.</p>
+                    </div>
+                </div>
+                <div class="application-scenario-image">
+                    <img src="app-tp.png" alt="TP Series Application - Gravure & Steel Plate Printing">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="specs">
+        <div class="container">
+            <h2 class="section-title">Technical Specifications</h2>
+            
+            <div class="spec-group">
+                <h3>Shore A° (Hardness)</h3>
+                <div class="spec-table-wrapper">
+                    <table class="spec-table">
+                        <thead>
+                            <tr>
+                                <th>Model Grade</th>
+                                <th>Hardness Range</th>
+                                <th>Color</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>90A</td><td>90 A° – 95 A°</td><td>Tea Brown</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="spec-group">
+                <h3>Standard Dimensions (mm)</h3>
+                <div class="dimension-grid">
+                    <div class="dim-item">7 × 40 × 170</div>
+                    <div class="dim-item">7 × 40 × 270</div>
+                    <div class="dim-item">7 × 40 × 350</div>
+                    <div class="dim-item customized">Customized sizes available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-product">
+        <div class="container">
+            <h2>Need a high-durability printing solution?</h2>
+            <p>Contact our technical team to discuss how the TP series can protect your gravure plates and optimize your workflow.</p>
+            <button class="cta-btn" onclick="window.location.href='contact.html'">Request a Quote</button>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo">KUROKI</div>
+        <p>&copy; 2026 Kuroki Industrial Technology. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    var mainMenu = document.getElementById('mainMenu');
+    var menuToggleBtn = document.querySelector('.menu-toggle');
+
+    function toggleMenu() {
+        mainMenu.classList.toggle('menu-open');
+        menuToggleBtn.classList.toggle('active');
+        if (!mainMenu.classList.contains('menu-open')) {
+            closeAllDropdowns();
+        }
+    }
+
+    function toggleDropdown(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.currentTarget.closest('.dropdown').classList.toggle('dropdown-open');
+    }
+
+    function closeAllDropdowns() {
+        document.querySelectorAll('.dropdown.dropdown-open').forEach(function(d) {
+            d.classList.remove('dropdown-open');
+        });
+    }
+
+    document.addEventListener('click', function(e) {
+        if (!mainMenu.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+            mainMenu.classList.remove('menu-open');
+            menuToggleBtn.classList.remove('active');
+            closeAllDropdowns();
+        }
+    });
+</script>
+
+</body>
+</html>
