@@ -1386,20 +1386,42 @@ display:flex;
 
 
 .dropdown-column {
-
-padding:16px 0 8px;
-
-gap:8px;
-
+    padding: 16px 0 8px;
+    gap: 8px;
+    margin-left: 0 !important; /* 覆盖桌面端的 margin-left: 60px */
+    min-width: auto;
 }
 
+.dropdown-column h4 {
+    margin: 0 0 12px 0;
+    padding: 0;
+    font-size: 13px;
+    text-align: left;
+}
 
 .dropdown-column a {
+    border-bottom: none;
+    padding: 10px 0;
+    margin-left: 0;
+    display: block;
+    width: 100%;
+}
 
-border-bottom:none;
+/* 移动端优化：确保所有内容左对齐，并隐藏占位标题 */
+.dropdown-column:nth-child(2) {
+    padding-top: 0; /* 减少第二列（EP/SP/TP）顶部的间距，使其看起来像第一列的延续 */
+}
 
-padding:6px 0;
+.dropdown-column:nth-child(2) h4 {
+    display: none;
+}
 
+.dropdown-column h4 {
+    color: var(--black);
+    opacity: 0.6;
+    border-bottom: 1px solid rgba(53, 91, 130, 0.1);
+    padding-bottom: 8px;
+    margin-top: 10px;
 }
 
 
